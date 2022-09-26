@@ -16,8 +16,6 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan": "^1.0",
         "ramsey/uuid": "^4.0",
-        "swoole/ide-helper": "dev-master",
-        "swow/swow": "dev-develop",
         "symfony/uid": "^6.0"
     },
     "autoload": {

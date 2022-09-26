@@ -21,9 +21,9 @@ class ConfigProvider
                     //     __DIR__,
                     // ],
                     'class_map' => [
-                        'Hyperf\Database\Schema\ForeignIdColumnDefinition' => __DIR__ . '../class_map/Hyperf/Database/Schema/ForeignIdColumnDefinition.php',
-                        'Hyperf\Database\Database\Model\Concerns\HasUlids' => __DIR__ . '../class_map/Hyperf/Database/Model/Concerns/HasUlids.php',
-                        'Hyperf\Database\Database\Model\Concerns\HasUuids' => __DIR__ . '../class_map/Hyperf/Database/Model/Concerns/HasUuids.php',
+                        'Hyperf\Database\Schema\ForeignIdColumnDefinition' => __DIR__ . '/../class_map/Hyperf/Database/Schema/ForeignIdColumnDefinition.php',
+                        'Hyperf\Database\Database\Model\Concerns\HasUlids' => __DIR__ . '/../class_map/Hyperf/Database/Model/Concerns/HasUlids.php',
+                        'Hyperf\Database\Database\Model\Concerns\HasUuids' => __DIR__ . '/../class_map/Hyperf/Database/Model/Concerns/HasUuids.php',
                     ],
                 ],
             ],

@@ -25,6 +25,7 @@
             "FriendsOfHyperf\\ModelUidAddon\\": "src/"
         },
         "files": [
+            "macros/blueprint.php",
             "macros/str.php"
         ]
     },
@@ -42,7 +43,7 @@
         }
     },
     "scripts": {
-        "analyse": "phpstan analyse --memory-limit 512M -l 0 -c phpstan.neon ./src ./macros",
+        "analyse": "phpstan analyse --memory-limit 512M -l 0 -c phpstan.neon ./src ./macros ./class_map",
         "cs-fix": "php-cs-fixer fix $1"
     }
 }

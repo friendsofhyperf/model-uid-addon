@@ -11,4 +11,5 @@ parameters:
     -
       message: '#Undefined variable: \$this#'
       paths:
-        - config/console.php
+        - macros/blueprint.php
+        - macros/str.php

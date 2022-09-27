@@ -10,25 +10,10 @@ declare(strict_types=1);
  */
 namespace Hyperf\Database\Model\Concerns;
 
-use Hyperf\Database\Model\Events\Creating;
 use Hyperf\Utils\Str;
 
 trait HasUuids
 {
-    /**
-     * Generate a primary UUID for the model.
-     */
-    public function creating(Creating $event)
-    {
-        /** @var self $model */
-        $model = $event->getModel();
-        foreach ($model->uniqueIds() as $column) {
-            if (empty($model->{$column})) {
-                $model->{$column} = $model->newUniqueId();
-            }
-        }
-    }
-
     /**
      * Generate a new UUID for the model.
      *

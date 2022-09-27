@@ -27,6 +27,9 @@ class ConfigProvider
                     ],
                 ],
             ],
+            'listeners' => [
+                Listener\CreatingListener::class,
+            ],
         ];
     }
 }

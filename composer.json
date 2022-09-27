@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.0",
         "hyperf/database": "~3.0.0",
+        "hyperf/event": "~3.0.0",
         "hyperf/utils": "~3.0.0"
     },
     "require-dev": {

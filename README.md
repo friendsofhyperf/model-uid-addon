@@ -14,4 +14,25 @@ The uid addon for hyperf Model.
 
 ```bash
 composer require friendsofhyperf/model-uid-addon
+# ulid
+composer require symfony/uid
+# uuid
+composer require ramsey/uuid
+```
+
+## Usage
+
+```php
+<?php
+
+namespace App\Model;
+
+use Hyperf\Database\Model\Concerns\HasUlids;
+
+class Article extends Model
+{
+    use HasUlids;
+
+    // ...
+}
 ```

@@ -10,22 +10,23 @@ declare(strict_types=1);
  */
 namespace Hyperf\Database\Model\Concerns;
 
+use Hyperf\Database\Model\Events\Creating;
 use Hyperf\Utils\Str;
 
 trait HasUlids
 {
     /**
-     * Boot the trait.
+     * Generate a primary ULID for the model.
      */
-    public static function bootHasUlids()
+    public function creating(Creating $event)
     {
-        static::creating(function (self $model) {
-            foreach ($model->uniqueIds() as $column) {
-                if (empty($model->{$column})) {
-                    $model->{$column} = $model->newUniqueId();
-                }
+        /** @var self $model */
+        $model = $event->getModel();
+        foreach ($model->uniqueIds() as $column) {
+            if (empty($model->{$column})) {
+                $model->{$column} = $model->newUniqueId();
             }
-        });
+        }
     }
 
     /**

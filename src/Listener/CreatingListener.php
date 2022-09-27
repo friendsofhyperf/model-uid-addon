@@ -34,13 +34,11 @@ class CreatingListener implements ListenerInterface
                 continue;
             }
 
-            (function () {
-                foreach ($this->uniqueIds() as $column) {
-                    if (empty($this->{$column})) {
-                        $this->{$column} = $this->newUniqueId();
-                    }
+            foreach ($model->uniqueIds() as $column) {
+                if (empty($model->{$column})) {
+                    $model->{$column} = $model->newUniqueId();
                 }
-            })->call($model);
+            }
         }
     }
 }
